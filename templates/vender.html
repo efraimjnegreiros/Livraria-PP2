@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender - Loja de Livros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1, h2 {
+            margin: 0;
+            padding: 0;
+        }
+        .book-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .book {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .book img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .book h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .book p {
+            font-size: 14px;
+            color: #777;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Compra de Livro</h1>
+    </header>
+
+    <div class="book-container">
+        <div class="book">
+            <img src="{{ livro['imagem_url'] }}" alt="{{ livro['nome'] }}">
+            <h3>{{ livro['nome'] }}</h3>
+            <p>Preço: R$ {{ livro['preco'] }}</p>
+            <p>Vendido por: {{ livro['livraria_nome'] }}</p>
+            <a href="{{ link_pagamento }}" class="button" target="_blank">Pagar Agora</a>
+        </div>
+    </div>
+
+</body>
+</html>

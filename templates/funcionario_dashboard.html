@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Funcionário</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Painel do Funcionário</h1>
+
+    <h3>Acesse os links abaixo:</h3>
+    <ul>
+        <li><a href="http://127.0.0.1:3000/mensagens" target="_blank">Mensagens</a></li>
+        <li><a href="http://127.0.0.1:3000/clientes" target="_blank">Clientes</a></li>
+        <li><a href="http://127.0.0.1:3000/funcionarios" target="_blank">Funcionários</a></li>
+        <li><a href="http://127.0.0.1:3000/livros" target="_blank">Livros</a></li>
+        <li><a href="http://127.0.0.1:3000/vendas" target="_blank">Vendas</a></li>
+
+        <li><a href="http://127.0.0.1:5000/login" target="_blank">Contatos</a></li>
+
+    </ul>
+
+    <br>
+    <a href="{{ url_for('logout') }}">Sair</a>
+</body>
+</html>
